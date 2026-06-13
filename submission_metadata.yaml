@@ -1,0 +1,21 @@
+team_name: "Perfect Matchmakers"
+primary_contact_name: "Mudasir Pasha"
+primary_contact_email: "thepashas786@email.com"
+primary_contact_phone: "+91 8123452604"
+github_repository: "https://github.com/themudasirpasha/redrob-ranking"
+sandbox_link: "https://colab.research.google.com/drive/1FDHlMmFm-MBIzgz9lJqI5P0IYN_0M63r?usp=sharing"
+ai_tools_declared:
+  - Claude
+  - ChatGPT
+compute_environment: "Google Colab, CPU, Python 3.11"
+methodology_summary: >
+  Hybrid scoring system using sentence-transformers embeddings for semantic 
+  similarity between JD and candidates. Combined with skills matching, 
+  experience quality scoring, and behavioral signals from redrob_signals. 
+  Filtered 1 lakh candidates to ~7000 relevant ones before ranking.
+  Final score = 0.40 x Semantic + 0.25 x Skills + 0.20 x Experience + 0.15 x Availability.
+team_members:
+  - name: "Mudasir Pasha"
+    email: "thepashas786@email.com"
+  - name: "Voni Purujit"
+    email: "@email.com"
