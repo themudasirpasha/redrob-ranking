@@ -50,6 +50,16 @@ python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 - Mudasir Pasha
 - Voni Purujit
 
+## Data
+Download the candidate dataset from the hackathon bundle:
+
+[Download candidates.jsonl.gz](https://drive.google.com/file/d/1MfD47XvVdRKBGRAyzGOxDCEf2ve96Jjo/view?usp=sharing)
+
+After downloading:
+1. Place `candidates.jsonl` in root directory
+2. Run `python precompute.py`
+3. Run `python rank.py --candidates ./candidates.jsonl --out ./submission.csv`
+
 ## Sandbox / Demo
 Run the notebook on Google Colab:
 
