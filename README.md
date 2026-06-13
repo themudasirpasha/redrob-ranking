@@ -49,3 +49,8 @@ python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 ## Team
 - Mudasir Pasha
 - Voni Purujit
+
+## Sandbox / Demo
+Run the notebook on Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FDHlMmFm-MBIzgz9lJqI5P0IYN_0M63r?usp=sharing)
