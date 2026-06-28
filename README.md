@@ -1,66 +1,77 @@
-# Redrob AI Candidate Ranking System
-### Intelligent Candidate Discovery & Ranking Challenge
+# 🏆 Redrob Hackathon — Intelligent Candidate Discovery & Ranking
+### Submission by Team Perfect Matchmakers
+#### Hack2Skill × Redrob AI | India Runs Hackathon
 
-## Approach
-Hybrid scoring system that ranks 1 lakh candidates for a Senior AI Engineer role using:
-- **Semantic similarity** — sentence-transformers embeddings (all-MiniLM-L6-v2)
-- **Skills matching** — JD-extracted must-have skills vs candidate skills
-- **Experience quality** — years of experience, product company background, location
-- **Behavioral signals** — availability, response rate, notice period, GitHub activity
+---
 
-## Scoring Formula 
-Final Score = 0.40 × Semantic + 0.25 × Skills + 0.20 × Experience + 0.15 × Availability
+## 🎯 Problem Statement
+Recruiters go through hundreds of profiles and still miss the right person — not because talent isn't there, but because keyword filters can't see what actually matters.
 
-## Setup
+We built an AI system that ranks candidates the way a great recruiter would — not by matching keywords, but by actually understanding who fits the role.
+
+---
+
+## 🧠 Our Approach
+Hybrid scoring system that ranks 1,00,000 candidates for a Senior AI Engineer role at Redrob AI using semantic understanding + behavioral signals + career depth analysis.
+
+### What makes our system different:
+- **We read intent, not keywords** — "built a retrieval pipeline" scores as high as "FAISS" in skills
+- **Career history over skill lists** — what you shipped matters more than what you listed
+- **Behavioral signals** — a perfect-on-paper candidate who hasn't logged in for 6 months is not actually available
+- **Honeypot detection** — fake/trap profiles removed before scoring
+
+---
+
+## 📊 Scoring Formula
+Final Score = 0.35 × Semantic + 0.25 × Skills + 0.22 × Career Depth + 0.10 × Experience + 0.08 × Availability
+
+| Component | Weight | What it measures |
+|-----------|--------|-----------------|
+| Semantic Match | 35% | BGE embeddings cosine similarity — JD vs candidate |
+| Skills Score | 25% | 30 must-have skills + endorsement weighting + assessment scores |
+| Career Depth | 22% | Production keywords, AI/ML tenure, job hopper penalty, researcher penalty |
+| Experience | 10% | Years in band, location, education tier |
+| Availability | 8% | 23 behavioral signals — active date, response rate, notice period |
+
+---
+
+## 🔍 Filters Applied
+- India only
+- Experience: 4–15 years
+- Open to work: True
+- Notice period: ≤ 90 days
+- Title whitelist: ML Engineer, AI Engineer, Data Scientist, NLP Engineer etc.
+- Consulting-only careers: Removed
+- Honeypot profiles: Removed at filter stage
+- Result: 1,00,000 → 214 high-quality candidates → Top 100
+
+---
+
+## 🛠️ Tech Stack
+- Python 3.11
+- BAAI/bge-base-en-v1.5 (sentence-transformers)
+- scikit-learn (cosine similarity)
+- pandas, numpy, python-docx
+
+---
+
+## ▶️ How to Run
 ```bash
 pip install -r requirements.txt
-```
-
-## How to Run
-
-### Step 1 — Precompute embeddings (one time, internet required)
-```bash
-python precompute.py
-```
-This will:
-- Load and filter candidates (India, 4-12 yrs, open to work, no consulting-only)
-- Generate embeddings using sentence-transformers
-- Save `filtered_candidates.json` and `embeddings.npy`
-
-### Step 2 — Generate ranked CSV (offline, CPU only, <5 min)
-```bash
 python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 ```
 
-## Tech Stack
-- Python 3.11
-- sentence-transformers (all-MiniLM-L6-v2)
-- scikit-learn (cosine similarity)
-- pandas, numpy
-- python-docx
+---
 
-## Filters Applied
-- Country: India only
-- Experience: 4-12 years
-- Open to work: True
-- Notice period: ≤ 90 days
-- Removed: consulting-only, irrelevant titles (Frontend, Business Analyst, etc.)
+## 🔗 Sandbox
+[![Open In Colab](https://colab.research.google.com/drive/1kcVc_I6MsyNHmsGbIfKBXEfafoG_HhtZ?usp=sharing)
 
-## Team
+---
+
+## 👥 Team Perfect Matchmakers
 - Mudasir Pasha
 - Voni Purujit
 
-## Data
-Download the candidate dataset from the hackathon bundle:
+---
 
-[Download candidates.jsonl.gz](https://drive.google.com/file/d/1MfD47XvVdRKBGRAyzGOxDCEf2ve96Jjo/view?usp=sharing)
-
-After downloading:
-1. Place `candidates.jsonl` in root directory
-2. Run `python precompute.py`
-3. Run `python rank.py --candidates ./candidates.jsonl --out ./submission.csv`
-
-## Sandbox / Demo
-Run the notebook on Google Colab:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FDHlMmFm-MBIzgz9lJqI5P0IYN_0M63r?usp=sharing)
+*Submitted for Redrob AI Intelligent Candidate Discovery & Ranking Challenge on Hack2Skill*
