@@ -64,7 +64,7 @@ python rank.py --candidates ./candidates.jsonl --out ./submission.csv
 ---
 
 ## 🔗 Sandbox
-[![Open In Colab](https://colab.research.google.com/drive/1kcVc_I6MsyNHmsGbIfKBXEfafoG_HhtZ?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kcVc_I6MsyNHmsGbIfKBXEfafoG_HhtZ?usp=sharing)
 
 ---
 
