@@ -20,7 +20,7 @@ with open('filtered_candidates.json', 'r') as f:
 embeddings = np.load('embeddings.npy')
 
 # Load model
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('BAAI/bge-base-en-v1.5')
 
 # JD embedding
 from docx import Document
