@@ -48,7 +48,7 @@ def candidate_to_text(c):
     return f"{p['current_title']} with {p['years_of_experience']} years. Location: {p['location']}, {p['country']}. Skills: {skills}. Career: {career}. {p['summary']}"
 
 print("Loading model...")
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('BAAI/bge-base-en-v1.5')
 
 print("Creating embeddings...")
 texts = [candidate_to_text(c) for c in filtered]
