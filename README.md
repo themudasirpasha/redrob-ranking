@@ -1,4 +1,6 @@
-# 🏆 Redrob Hackathon — Intelligent Candidate Discovery & Ranking
+# 🏆 Redrob Hackathon — Intelligent Candidate Discovery & 
+<img width="1346" height="341" alt="image" src="https://github.com/user-attachments/assets/3f422e8b-d6ec-41b5-aac1-c57b9aaead04" />
+
 ### Submission by Team Perfect Matchmakers
 #### Hack2Skill × Redrob AI | India Runs Hackathon
 
