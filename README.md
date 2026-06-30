@@ -56,7 +56,7 @@ Final Score = 0.35 × Semantic + 0.25 × Skills + 0.22 × Career Depth + 0.10 ×
 ---
 ## System Architecture
 
-![Architecture Diagram] <img width="1363" height="621" alt="image" src="https://github.com/user-attachments/assets/67c86a77-2ce4-42a3-a9db-af9b3df319da" />
+ <img width="1363" height="621" alt="image" src="https://github.com/user-attachments/assets/67c86a77-2ce4-42a3-a9db-af9b3df319da" />
 
 
 ## ▶️ How to Run
